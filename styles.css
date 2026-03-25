@@ -343,9 +343,9 @@ section { padding: 84px 0; }
 .pkg { filter: drop-shadow(0 20px 36px rgba(0,0,0,.55)); }
 
 /* --- Hero images animadas --- */
-.bx-std  { height: 100px; width: auto; animation: flt-a 3s ease-in-out infinite; }
-.bx-prem { height: 130px; width: auto; animation: flt-b 3.6s ease-in-out infinite; }
-.bx-fries { height: 110px; width: auto; animation: flt-c 4.2s ease-in-out infinite; }
+.bx-std  { height: 150px; width: auto; animation: flt-a 3s ease-in-out infinite; }
+.bx-prem { height: 180px; width: auto; animation: flt-b 3.6s ease-in-out infinite; }
+.bx-fries { height: 160px; width: auto; animation: flt-c 4.2s ease-in-out infinite; }
 
 @keyframes flt-a { 0%,100%{transform:translateY(-8px);}  50%{transform:translateY(-20px);} }
 @keyframes flt-b { 0%,100%{transform:translateY(-18px);} 50%{transform:translateY(-4px);} }
