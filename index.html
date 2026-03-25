@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gran Combo — Packaging premium para hamburguesas y papas fritas. Eleva la imagen de tu restaurante, franquicia o cadena de comida rápida.">
+  <title>Gran Combo | Packaging Premium para Restaurantes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- ====== FLOATING WHATSAPP ====== -->
+  <a class="wa-float"
+     href="https://wa.me/1234567890?text=Hola%2C%20estoy%20interesado%20en%20el%20ComboBox%203%20para%20mi%20restaurante"
+     target="_blank" rel="noopener noreferrer"
+     aria-label="Contáctanos por WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- ====== MOBILE OVERLAY ====== -->
+  <div class="mob-overlay" id="mobOverlay" onclick="closeMob()"></div>
+
+  <!-- ====== MOBILE MENU ====== -->
+  <nav class="mob-menu" id="mobMenu" aria-label="Menú móvil">
+    <button class="close-mob" onclick="closeMob()" aria-label="Cerrar menú"><i class="fas fa-times"></i></button>
+    <a href="#hero"         onclick="closeMob()">Inicio</a>
+    <a href="#products"     onclick="closeMob()">Productos</a>
+    <a href="#benefits"     onclick="closeMob()">Beneficios</a>
+    <a href="#testimonials" onclick="closeMob()">Testimonios</a>
+    <a href="#offer"        onclick="closeMob()">Oferta</a>
+   <!--<a href="#contact"      onclick="closeMob()" style="color:var(--primary);margin-top:8px;">Solicitar Cotización</a>-->
+  </nav>
+
+  <!-- ====== HEADER ====== -->
+  <header class="header" id="mainHeader">
+    <div class="container">
+      <div class="header-inner">
+        <a href="#hero" class="logo">
+          <div class="logo-icon">📦</div>
+          Gran <span>Combo</span>
+        </a>
+        <nav class="nav" aria-label="Navegación principal">
+          <a href="#hero">Inicio</a>
+          <a href="#products">Productos</a>
+          <a href="#benefits">Beneficios</a>
+          <a href="#testimonials">Testimonios</a>
+         <!--<a href="#contact" class="nav-cta">Cotiza ahora</a>-->
+        </nav>
+        <div class="hamburger" onclick="openMob()" aria-label="Abrir menú" role="button" tabindex="0">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================================
+       HERO SECTION
+  =================================== -->
+  <section id="hero">
+    <div class="container">
+      <div class="hero-grid">
+
+        <!-- Content -->
+        <div class="hero-content">
+          <div class="hero-tag">Combo Premium · Restaurantes &amp; Franquicias</div>
+          <h1 class="hero-title">
+            Convierte cada pedido<br>
+            en una <span class="hl">experiencia</span><br>
+            que tu marca <span class="red">merece</span>
+          </h1>
+          <p class="hero-sub">
+            El empaque es el primer contacto de tu cliente con tu marca.
+            Con nuestro <strong>Gran Combo de 3 empaques premium</strong>,
+            cada entrega se convierte en una experiencia memorable que genera recompra.
+          </p>
+          <div class="hero-ctas">
+            <a href="https://wa.me/3116111687?text=Hola%2C%20quiero%20cotizar%20el%20Gran%20Combo"
+               target="_blank" rel="noopener noreferrer"
+               class="btn btn-wa btn-lg">
+              <i class="fab fa-whatsapp"></i> Cotiza ahora
+            </a>
+          </div>
+          <div class="hero-stats">
+            <div>
+              <div class="stat-num">500+</div>
+              <div class="stat-lbl">Restaurantes</div>
+            </div>
+            <div>
+              <div class="stat-num">15+</div>
+              <div class="stat-lbl">Países</div>
+            </div>
+            <div>
+              <div class="stat-num">3</div>
+              <div class="stat-lbl">Piezas combo</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Packaging scene -->
+        <div class="hero-visual">
+          <div>
+            <!-- Desktop: 3 imagenes animadas -->
+            <div class="scene-wrap scene-desktop">
+              <img src="assets/img/hero1-2.png" alt="Caja hamburguesa estándar" class="bx-std pkg">
+              <img src="assets/img/hero2-2.png" alt="Caja hamburguesa premium" class="bx-prem pkg">
+              <img src="assets/img/hero3-2.png" alt="Porta-papas" class="bx-fries pkg">
+            </div>
+            <!-- Movil: imagen unica -->
+            <img src="assets/img/heroimg2.png" alt="Combo packaging premium" class="scene-mobile">
+            <p class="scene-label">Combo de 3 empaques premium</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <div class="trust-bar">
+    <div class="container">
+      <div class="trust-list">
+        <div class="trust-item"><i class="fas fa-shield-alt"></i><span>Material anti-grasa</span></div>
+        <div class="trust-item"><i class="fas fa-globe-americas"></i><span>Envíos internacionales</span></div>
+        <div class="trust-item"><i class="fas fa-paint-brush"></i><span>Branding personalizable</span></div>
+        <div class="trust-item"><i class="fas fa-boxes"></i><span>Precios por volumen</span></div>
+        <div class="trust-item"><i class="fab fa-whatsapp"></i><span>Soporte WhatsApp</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================
+       PROBLEM SECTION
+  =================================== -->
+  <section id="problem">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-tag">El Problema</span>
+        <h2 class="section-title">¿Tu empaque actual está<br><span>dañando tu negocio?</span></h2>
+        <p class="section-sub">
+          Muchos restaurantes pierden clientes y reputación por algo tan simple como el empaque.
+          ¿Te identificas con alguno de estos problemas?
+        </p>
+      </div>
+      <div class="problem-grid">
+        <div class="problem-card fi-up d1">
+          <div class="p-icon"><i class="fas fa-times-circle"></i></div>
+          <h3>Imagen de marca deteriorada</h3>
+          <p>Un empaque genérico y de baja calidad destruye la percepción premium de tu producto. Los clientes juzgan tu restaurante antes de dar la primera mordida.</p>
+        </div>
+        <div class="problem-card fi-up d2">
+          <div class="p-icon"><i class="fas fa-tint-slash"></i></div>
+          <h3>Filtraciones y materiales débiles</h3>
+          <p>El empaque que se rompe, mancha o filtra grasa arruina la experiencia de delivery, genera reclamos, reseñas negativas y pérdida de clientes fieles.</p>
+        </div>
+        <div class="problem-card fi-up d3">
+          <div class="p-icon"><i class="fas fa-user-slash"></i></div>
+          <h3>Sin diferenciación de la competencia</h3>
+          <p>Si tu empaque se ve igual al de todos, ¿por qué elegiría alguien tu marca? En el mundo del delivery, el packaging ES tu producto.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================
+       SOLUTION SECTION
+  =================================== -->
+  <section id="solution">
+    <div class="container" style="position:relative;z-index:1;">
+      <div class="text-center">
+        <span class="section-tag">La Solución</span>
+        <h2 class="section-title" style="color:#fff;">Presentamos el <span>ComboBox 3</span></h2>
+        <p class="section-sub">
+          Tres empaques diseñados para trabajar en perfecta armonía, elevando la experiencia
+          de cada cliente en cada pedido.
+        </p>
+      </div>
+
+      <div class="solution-grid">
+        <div class="solution-features fi-lft">
+          <div class="sol-feat">
+            <div class="feat-num">01</div>
+            <div class="feat-txt">
+              <h4>Materiales premium resistentes</h4>
+              <p>Cartón de alta gramaje tratado contra humedad y grasa. Tus hamburguesas llegan perfectas, siempre.</p>
+            </div>
+          </div>
+          <div class="sol-feat">
+            <div class="feat-num">02</div>
+            <div class="feat-txt">
+              <h4>Branding que genera reconocimiento</h4>
+              <p>Personaliza con tu logo en 1 color o full color. Cada caja es una valla publicitaria móvil para tu marca.</p>
+            </div>
+          </div>
+          <div class="sol-feat">
+            <div class="feat-num">03</div>
+            <div class="feat-txt">
+              <h4>Diseño ergonómico para operaciones</h4>
+              <p>Fácil de armar, apilar y transportar. Optimiza tiempos en cocina y mejora la eficiencia de tu equipo.</p>
+            </div>
+          </div>
+          <div class="sol-feat">
+            <div class="feat-num">04</div>
+            <div class="feat-txt">
+              <h4>Coherencia visual en todo el combo</h4>
+              <p>Las tres piezas comparten el mismo lenguaje de diseño, creando una identidad de marca sólida y uniforme.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="solution-visual fi-rgt">
+          <div class="combo-ring-outer">
+            <div class="combo-ring-inner">
+              <div class="combo-num">3</div>
+              <div class="combo-txt">productos<br>en 1 combo</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================
+       BENEFITS SECTION
+  =================================== -->
+  <section id="benefits">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-tag">Beneficios Clave</span>
+        <h2 class="section-title">Todo lo que ganas con<br><span>el Gran Combo</span></h2>
+        <p class="section-sub">
+          Más que empaques, son herramientas de negocio que generan retorno de inversión real.
+        </p>
+      </div>
+      <div class="benefits-grid">
+        <div class="benefit-card fi-up d1">
+          <div class="b-icon"><i class="fas fa-crown"></i></div>
+          <h3>Imagen de marca premium</h3>
+          <p>Proyecta profesionalismo y calidad desde el primer contacto visual. Tus clientes percibirán mayor valor en tu producto.</p>
+        </div>
+        <div class="benefit-card fi-up d2">
+          <div class="b-icon"><i class="fas fa-camera"></i></div>
+          <h3>Fotos de Instagram irresistibles</h3>
+          <p>El packaging atractivo genera contenido orgánico. Tus clientes compartirán sus pedidos y promoverán tu marca gratis.</p>
+        </div>
+        <div class="benefit-card fi-up d3">
+          <div class="b-icon"><i class="fas fa-shield-alt"></i></div>
+          <h3>Materiales resistentes y duraderos</h3>
+          <p>Sin filtraciones, sin roturas. Material tratado para conservar temperatura y estructura tanto en delivery como dine-in.</p>
+        </div>
+        <div class="benefit-card fi-up d4">
+          <div class="b-icon"><i class="fas fa-motorcycle"></i></div>
+          <h3>Perfecto para delivery y local</h3>
+          <p>Diseñado para resistir el viaje y lucir impecable en mesa. Un solo empaque que funciona en todos tus canales de venta.</p>
+        </div>
+        <div class="benefit-card fi-up d5">
+          <div class="b-icon"><i class="fas fa-paint-brush"></i></div>
+          <h3>Branding 100% personalizable</h3>
+          <p>Tu logo, tus colores, tu mensaje. Impresión en 1 color kraft o multicolor full color según tu presupuesto.</p>
+        </div>
+        <div class="benefit-card fi-up d6">
+          <div class="b-icon"><i class="fas fa-chart-line"></i></div>
+          <h3>Mayor valor percibido = más ventas</h3>
+          <p>Los clientes pagan más por productos bien presentados. El buen packaging justifica precios premium y aumenta tu ticket promedio.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================
+       PRODUCT SHOWCASE
+  =================================== -->
+  <section id="products">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-tag">Los Productos</span>
+        <h2 class="section-title">Conoce cada pieza del<br><span>Gran Combo</span></h2>
+        <p class="section-sub">
+          Tres empaques complementarios, diseñados con precisión para cubrir
+          todas tus necesidades operativas.
+        </p>
+      </div>
+
+      <div class="products-grid">
+
+        <!-- Product 1 -->
+        <div class="product-card fi-up d1">
+          <div class="prod-visual pv-1">
+            <img src="assets/img/estandarbox.png" alt="Caja hamburguesa estándar" class="prod-img">
+            <span class="prod-badge pb-pop">Más popular</span>
+          </div>
+          <div class="prod-info">
+            <h3>Caja Hamburguesa Estándar</h3>
+            <p>La solución práctica y económica para tus hamburguesas del día a día. Kraft natural o impresa con tu logo, lista para conquistar.</p>
+            <div class="prod-tags">
+              <span class="ptag">Kraft natural</span>
+              <span class="ptag">Anti-grasa</span>
+              <span class="ptag">Imprimible</span>
+              <span class="ptag">Fácil armado</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card fi-up d2">
+          <div class="prod-visual pv-2">
+            <img src="assets/img/premiumbox.png" alt="Caja hamburguesa premium" class="prod-img">
+            <span class="prod-badge pb-prem">Premium XL</span>
+          </div>
+          <div class="prod-info">
+            <h3>Caja Hamburguesa Premium Grande</h3>
+            <p>Para doble pisos, smash burgers y combos especiales. Diseño elegante que comunica exclusividad y eleva el precio percibido.</p>
+            <div class="prod-tags">
+              <span class="ptag">Formato XL</span>
+              <span class="ptag">Doble refuerzo</span>
+              <span class="ptag">Full color</span>
+              <span class="ptag">Acabado premium</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card fi-up d3">
+          <div class="prod-visual pv-3">
+            <img src="assets/img/complementobox.png" alt="Porta-papas fries holder" class="prod-img">
+            <span class="prod-badge pb-comp">Complemento ideal</span>
+          </div>
+          <div class="prod-info">
+            <h3>Porta-papas (Fries Holder)</h3>
+            <p>El complemento perfecto para completar la experiencia del combo. Ergonómico, resistente y con diseño que hace las papas irresistibles.</p>
+            <div class="prod-tags">
+              <span class="ptag">Ergonómico</span>
+              <span class="ptag">Anti-derrame</span>
+              <span class="ptag">Imprimible</span>
+              <span class="ptag">Apilable</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================
+       SOCIAL PROOF (temporalmente oculto)
+  =================================== -->
+  <!--
+  <section id="testimonials">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-tag">Testimonios</span>
+        <h2 class="section-title">Lo que dicen nuestros<br><span>clientes exitosos</span></h2>
+        <p class="section-sub">
+          Restaurantes y franquicias de todo el mundo ya transformaron su imagen
+          con el ComboBox 3.
+        </p>
+      </div>
+
+      <div class="test-grid">
+        <div class="test-card fi-up d1">
+          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p class="test-txt">"Desde que usamos el ComboBox 3, las fotos de nuestros clientes en Instagram aumentaron un 300%. El empaque vende solo. Nuestras ventas subieron notablemente en los primeros 2 meses."</p>
+          <div class="test-author">
+            <div class="t-avatar av-a">CR</div>
+            <div class="t-info">
+              <h4>Carlos Rodríguez</h4>
+              <span>Burger House — Bogotá, Colombia</span>
+            </div>
+          </div>
+        </div>
+        <div class="test-card fi-up d2">
+          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p class="test-txt">"Manejo una cadena de 12 restaurantes y ahora todos usan el mismo empaque personalizado. La imagen de marca es uniforme y mis clientes identifican inmediatamente nuestro producto."</p>
+          <div class="test-author">
+            <div class="t-avatar av-b">MV</div>
+            <div class="t-info">
+              <h4>María Velásquez</h4>
+              <span>Franquicia Burgería MV — México</span>
+            </div>
+          </div>
+        </div>
+        <div class="test-card fi-up d3">
+          <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p class="test-txt">"Lo que más me impresionó fue la calidad del material. Cero filtraciones, el cartón aguanta muy bien. Mis clientes siempre comentan que el pedido llega impecable. Totalmente recomendado."</p>
+          <div class="test-author">
+            <div class="t-avatar av-c">JP</div>
+            <div class="t-info">
+              <h4>Juan Pablo Torres</h4>
+              <span>The Smash Burger — Lima, Perú</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="clients-bar fi-up">
+        <p class="clients-lbl">Marcas que confían en nosotros</p>
+        <div class="clients-row">
+          <div class="c-logo">Burger Co.</div>
+          <div class="c-logo">SmashBros</div>
+          <div class="c-logo">FoodChain</div>
+          <div class="c-logo">BurgerKing</div>
+          <div class="c-logo">FastFoods+</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  -->
+
+  <!-- ===================================
+       OFFER SECTION
+  =================================== -->
+  <section id="offer">
+    <div class="container" style="position:relative;z-index:1;">
+      <div class="offer-box fi-up">
+        <div class="offer-sticker">🔥 Oferta especial por volumen</div>
+        <h2 class="offer-title">El <span>ComboBox 3</span> completo<br>en un solo pedido</h2>
+        <p class="offer-sub">
+          Obtén los tres empaques en un solo pedido, con descuentos por volumen
+          y personalización de tu marca incluida.
+        </p>
+        <div class="offer-items">
+          <div class="o-item">
+            <span class="o-item-ico">📦</span>
+            <div class="o-item-txt"><span>Caja Estándar</span><small>Hamburguesa clásica</small></div>
+          </div>
+          <div class="o-item">
+            <span class="o-item-ico">🍔</span>
+            <div class="o-item-txt"><span>Caja Premium XL</span><small>Para combos especiales</small></div>
+          </div>
+          <div class="o-item">
+            <span class="o-item-ico">🍟</span>
+            <div class="o-item-txt"><span>Porta-papas</span><small>Complemento perfecto</small></div>
+          </div>
+          <div class="o-item">
+            <span class="o-item-ico">🎨</span>
+            <div class="o-item-txt"><span>Branding incluido</span><small>Tu logo personalizado</small></div>
+          </div>
+        </div>
+        <div class="offer-ctas">
+          <a href="https://wa.me/3116111687?text=Quiero%20cotizar%20el%20Gran%20Combo%20para%20mi%20restaurante"
+             target="_blank" rel="noopener noreferrer"
+             class="btn btn-wa btn-lg"><i class="fab fa-whatsapp"></i> Cotiza ahora</a>
+        </div>
+        <p class="offer-note"><i class="fas fa-certificate"></i> Descuentos para pedidos de 500+ unidades · Envíos a todo el mundo</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================
+       CTA SECTION
+  =================================== -->
+  <section id="cta">
+    <div class="container">
+      <div class="cta-content fi-up">
+        <h2 class="cta-title">¿Listo para transformar<br>la imagen de tu restaurante?</h2>
+        <p class="cta-sub">
+          Únete a más de 500 restaurantes que ya elevaron su marca y la
+          experiencia de sus clientes con el ComboBox 3.
+        </p>
+        <div class="cta-btns">
+          <a href="https://wa.me/3116111687?text=Hola%2C%20quiero%20cotizar%20el%20Gran%20Combo"
+             target="_blank" rel="noopener noreferrer"
+             class="btn btn-wa btn-lg"><i class="fab fa-whatsapp"></i> Cotiza ahora</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================
+       CONTACT SECTION
+  =================================== -->
+  <!-- 
+  <section id="contact">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-tag">Contacto</span>
+        <h2 class="section-title">Hablemos de tu<br><span>proyecto de packaging</span></h2>
+        <p class="section-sub">
+          Cuéntanos sobre tu negocio y te enviaremos una propuesta personalizada
+          con precios por volumen en menos de 24 horas.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+         Info 
+        <div class="ci fi-lft">
+          <h3>¿Prefieres contactarnos directamente?</h3>
+          <p>Estamos listos para ayudarte a encontrar la solución de packaging perfecta
+             para tu restaurante, franquicia o cadena de comida rápida.</p>
+          <div class="c-methods">
+            <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" class="c-method">
+              <div class="cm-ico ico-wa"><i class="fab fa-whatsapp"></i></div>
+              <div class="cm-txt"><span>WhatsApp (preferido)</span><small>Respuesta en menos de 1 hora</small></div>
+            </a>
+            <a href="mailto:ventas@combobox3.com" class="c-method">
+              <div class="cm-ico ico-email"><i class="fas fa-envelope"></i></div>
+              <div class="cm-txt"><span>ventas@combobox3.com</span><small>Respuesta en 24 horas</small></div>
+            </a>
+            <a href="tel:+11234567890" class="c-method">
+              <div class="cm-ico ico-phone"><i class="fas fa-phone"></i></div>
+              <div class="cm-txt"><span>+1 (234) 567-890</span><small>Lun – Vie: 8am – 6pm</small></div>
+            </a>
+          </div>
+        </div>
+
+         Form 
+        <div class="fi-rgt">
+          <div class="c-form">
+            <h3>Solicitar cotización gratuita</h3>
+            <div id="formWrap">
+              <form id="contactForm" novalidate>
+                <div class="form-row">
+                  <div class="f-group">
+                    <label for="inp-name">Nombre completo <span class="req">*</span></label>
+                    <input type="text" id="inp-name" name="name" placeholder="Carlos Rodríguez" required autocomplete="name">
+                  </div>
+                  <div class="f-group">
+                    <label for="inp-biz">Nombre del negocio <span class="req">*</span></label>
+                    <input type="text" id="inp-biz" name="business" placeholder="Burger House" required autocomplete="organization">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="f-group">
+                    <label for="inp-email">Correo electrónico <span class="req">*</span></label>
+                    <input type="email" id="inp-email" name="email" placeholder="carlos@burgerhousee.com" required autocomplete="email">
+                  </div>
+                  <div class="f-group">
+                    <label for="inp-phone">Teléfono / WhatsApp <span class="req">*</span></label>
+                    <input type="tel" id="inp-phone" name="phone" placeholder="+57 300 000 0000" required autocomplete="tel">
+                  </div>
+                </div>
+                <div class="f-group">
+                  <label for="inp-country">País <span class="req">*</span></label>
+                  <select id="inp-country" name="country" required autocomplete="country">
+                    <option value="">Selecciona tu país...</option>
+                    <option value="CO">Colombia</option>
+                    <option value="MX">México</option>
+                    <option value="AR">Argentina</option>
+                    <option value="PE">Perú</option>
+                    <option value="CL">Chile</option>
+                    <option value="EC">Ecuador</option>
+                    <option value="VE">Venezuela</option>
+                    <option value="PA">Panamá</option>
+                    <option value="CR">Costa Rica</option>
+                    <option value="GT">Guatemala</option>
+                    <option value="US">Estados Unidos</option>
+                    <option value="ES">España</option>
+                    <option value="OTHER">Otro país</option>
+                  </select>
+                </div>
+                <div class="f-group">
+                  <label for="inp-qty">Cantidad estimada de pedido</label>
+                  <select id="inp-qty" name="quantity">
+                    <option value="">Selecciona una opción...</option>
+                    <option value="100-499">100 – 499 unidades</option>
+                    <option value="500-999">500 – 999 unidades</option>
+                    <option value="1000-4999">1,000 – 4,999 unidades</option>
+                    <option value="5000+">5,000+ unidades</option>
+                  </select>
+                </div>
+                <div class="f-group">
+                  <label for="inp-msg">Cuéntanos sobre tu negocio</label>
+                  <textarea id="inp-msg" name="message" placeholder="Ej: Tengo una cadena de 3 restaurantes, necesito empaque personalizado con mi logo..."></textarea>
+                </div>
+                <button type="submit" class="f-submit">
+                  <i class="fas fa-paper-plane"></i> Enviar Solicitud de Cotización
+                </button>
+              </form>
+            </div>
+            <div class="form-success" id="formSuccess">
+              <div class="suc-icon"><i class="fas fa-check"></i></div>
+              <h3>¡Solicitud enviada!</h3>
+              <p>Nos comunicaremos contigo en menos de 24 horas con tu cotización personalizada.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>  -->
+ 
+
+  <!-- ===================================
+       FOOTER
+  =================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="fb">
+          <a href="#hero" class="logo">
+            <div class="logo-icon">📦</div>
+            Combo<span>Box</span>3
+          </a>
+          <p>Packaging premium para restaurantes, franquicias y negocios de comida rápida en toda América y el mundo.</p>
+        </div>
+        <div class="fl">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="#hero">Inicio</a></li>
+            <li><a href="#problem">El Problema</a></li>
+            <li><a href="#solution">Solución</a></li>
+            <li><a href="#benefits">Beneficios</a></li>
+          </ul>
+        </div>
+        <div class="fl">
+          <h4>Productos</h4>
+          <ul>
+            <li><a href="#products">Caja Estándar</a></li>
+            <li><a href="#products">Caja Premium XL</a></li>
+            <li><a href="#products">Porta-papas</a></li>
+            <li><a href="#offer">Combo 3 en 1</a></li>
+          </ul>
+        </div>
+        <div class="fl">
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+            <li><a href="mailto:ventas@combobox3.com">Email</a></li>
+            <li><a href="#contact">Formulario</a></li>
+            <li><a href="#testimonials">Testimonios</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="footer-hr">
+      <div class="footer-bot">
+        <p>© 2024 ComboBox3. Todos los derechos reservados.</p>
+        <div class="f-social">
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /* ==============================
+       STICKY HEADER
+    ============================== */
+    const hdr = document.getElementById('mainHeader');
+    window.addEventListener('scroll', () => {
+      hdr.classList.toggle('scrolled', window.scrollY > 50);
+    }, { passive: true });
+
+    /* ==============================
+       MOBILE MENU
+    ============================== */
+    function openMob() {
+      document.getElementById('mobMenu').classList.add('open');
+      document.getElementById('mobOverlay').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMob() {
+      document.getElementById('mobMenu').classList.remove('open');
+      document.getElementById('mobOverlay').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    // Keyboard support for hamburger button
+    document.querySelector('.hamburger').addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openMob(); }
+    });
+
+    /* ==============================
+       SCROLL ANIMATIONS
+    ============================== */
+    const animEls = document.querySelectorAll('.fi-up, .fi-lft, .fi-rgt');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('vis');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    animEls.forEach(el => io.observe(el));
+
+    /* ==============================
+       SMOOTH SCROLL
+    ============================== */
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href === '#' || href.length < 2) return;
+        const target = document.querySelector(href);
+        if (!target) return;
+        e.preventDefault();
+        const offset = hdr.offsetHeight + 16;
+        const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+      });
+    });
+
+    /* ==============================
+       CONTACT FORM
+    ============================== */
+    const form   = document.getElementById('contactForm');
+    const wrap   = document.getElementById('formWrap');
+    const succ   = document.getElementById('formSuccess');
+
+    if (form) {
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        let valid = true;
+
+        // Validate required fields
+        this.querySelectorAll('[required]').forEach(field => {
+          field.style.borderColor = '';
+          if (!field.value.trim()) {
+            field.style.borderColor = '#DC2626';
+            valid = false;
+            field.addEventListener('input', () => { field.style.borderColor = ''; }, { once: true });
+          }
+        });
+        if (!valid) return;
+
+        // Email format check
+        const emailEl = this.querySelector('#inp-email');
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(emailEl.value)) {
+          emailEl.style.borderColor = '#DC2626';
+          emailEl.focus();
+          return;
+        }
+
+        // Simulate submission
+        const btn = this.querySelector('.f-submit');
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+        btn.disabled = true;
+
+        setTimeout(() => {
+          wrap.style.display = 'none';
+          succ.style.display = 'block';
+        }, 1400);
+      });
+    }
+  </script>
+</body>
+</html>
