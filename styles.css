@@ -446,7 +446,7 @@ section { padding: 84px 0; }
    PRODUCT SHOWCASE IMAGES
 ============================== */
 .prod-img {
-  max-height: 160px;
+  max-height: 210px;
   width: auto;
   object-fit: contain;
   filter: drop-shadow(0 20px 36px rgba(0,0,0,.55));
