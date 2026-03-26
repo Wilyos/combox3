@@ -226,7 +226,7 @@ section { padding: 84px 0; }
   min-height: 100vh;
   background:
     linear-gradient(135deg, rgba(15,10,5,.82) 0%, rgba(26,16,10,.78) 40%, rgba(45,24,16,.72) 70%, rgba(26,14,8,.82) 100%),
-    url('assets/img/banner.png') center center / cover no-repeat;
+    url('assets/img/bannerhero.webp') center center / cover no-repeat;
   display: flex;
   align-items: center;
   padding: 130px 0 80px;
