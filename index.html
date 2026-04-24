@@ -123,7 +123,10 @@
               <img src="assets/img/hero3-2.png" alt="Porta-papas" class="bx-fries pkg">
             </div>
             <!-- Movil: imagen unica -->
-            <img src="assets/img/heroimg2.png" alt="Combo packaging premium" class="scene-mobile">
+            <picture>
+              <source srcset="assets/img/heroimg2.webp" type="image/webp">
+              <img src="assets/img/heroimg2.png" alt="Combo packaging premium" class="scene-mobile" fetchpriority="high" loading="eager" width="800" height="800">
+            </picture>
             <p class="scene-label">Combo de 3 empaques premium</p>
           </div>
         </div>
