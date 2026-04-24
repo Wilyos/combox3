@@ -9,6 +9,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '3077427545908543');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=3077427545908543&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
 </head>
 <body>
   <!-- ====== FLOATING WHATSAPP ====== -->
@@ -776,6 +793,76 @@
         window.scrollTo({ top, behavior: 'smooth' });
       });
     });
+
+    /* ==============================
+       META PIXEL EVENTS
+    ============================== */
+
+    // 1. ViewContent: usuario ve la sección de productos
+    const productsSection = document.getElementById('products');
+    if (productsSection) {
+      const prodObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            fbq('track', 'ViewContent', {
+              content_name: 'Gran Combo - 3 Empaques Premium',
+              content_category: 'Packaging',
+              content_ids: ['gran-combo-x3'],
+              content_type: 'product'
+            });
+            prodObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.3 });
+      prodObserver.observe(productsSection);
+    }
+
+    // 2. CustomizeProduct: usuario ve la sección de precios
+    const pricingSection = document.getElementById('pricing');
+    if (pricingSection) {
+      const pricingObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            fbq('track', 'CustomizeProduct');
+            pricingObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+      pricingObserver.observe(pricingSection);
+    }
+
+    // 3. InitiateCheckout: clic en una tarjeta de precio
+    document.querySelectorAll('.price-card').forEach(card => {
+      card.addEventListener('click', function () {
+        const tier = this.querySelector('.pc-tier') ? this.querySelector('.pc-tier').textContent.trim() : '';
+        const priceRaw = this.querySelector('.pc-price') ? this.querySelector('.pc-price').textContent.replace(/[^0-9]/g, '') : '0';
+        fbq('track', 'InitiateCheckout', {
+          content_name: 'Gran Combo - ' + tier,
+          content_category: 'Packaging',
+          value: parseInt(priceRaw, 10) || 0,
+          currency: 'COP',
+          num_items: 3
+        });
+      });
+    });
+
+    // 4. Lead: clic en botones CTA principales de WhatsApp (secciones hero, oferta, cta)
+    document.querySelectorAll('#hero a[href*="wa.me"], #offer a[href*="wa.me"], #cta a[href*="wa.me"]').forEach(btn => {
+      btn.addEventListener('click', function () {
+        fbq('track', 'Lead', {
+          content_name: 'Cotizar Gran Combo',
+          content_category: 'WhatsApp CTA'
+        });
+      });
+    });
+
+    // 5. Contact: clic en el botón flotante de WhatsApp
+    const waFloat = document.querySelector('.wa-float');
+    if (waFloat) {
+      waFloat.addEventListener('click', function () {
+        fbq('track', 'Contact');
+      });
+    }
 
     /* ==============================
        CONTACT FORM
